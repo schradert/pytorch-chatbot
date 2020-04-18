@@ -5,14 +5,14 @@ import sys
 import os
 import torch
 import torch.nn as nn
-from . import constants as c
-from .encoder import EncoderRNN
-from .decoder import LuongAttnDecoderRNN
-from .evaluation import GreedySearchDecoder, evaluateInput
-from .batching import batch2TrainData, indexesFromSentence
-from .training import trainIters
-from .loading import loadPrepareData, trimRareWords, normalizeStr, Vocabulary
-from .formatting import loadLines, loadConvos, extractSentencePairs, printLines
+from . import constants as c, encoder, decoder, evaluation, batching, training, loading, formatting
+from encoder import EncoderRNN
+from decoder import LuongAttnDecoderRNN
+from evaluation import GreedySearchDecoder, evaluateInput
+from batching import batch2TrainData, indexesFromSentence
+from training import trainIters
+from loading import loadPrepareData, trimRareWords, normalizeStr, Vocabulary
+from formatting import loadLines, loadConvos, extractSentencePairs, printLines
 
 
 def format_data():
